@@ -4,14 +4,9 @@ function filterReposts(collection, followings) {
     let result = [];
     for (let i = 0; i < collection.length; ++i) {
         let item = collection[i];
-        if (item["type"] === "track-repost") {
-            if (!followings.has(item["track"]["user_id"])) {
-                continue;
-            }
-        } else if (item["type"] === "playlist-repost") {
-            if (!followings.has(item["playlist"]["user_id"])) {
-                continue;
-            }
+        // Removing all the playlists reposts and the track repost.
+        if (item["type"] === "track-repost" || item["type"] === "playlist-repost") {
+            continue;
         }
         result.push(item);
     }
