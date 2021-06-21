@@ -4,10 +4,10 @@
   "description": "Removes reposted tracks in your SoundCloud stream",
   "browser_specific_settings": {
     "gecko": {
-      "id": "screpostblocker@crossbowffs.com"
+      "id": "screpostblocker@squadella.com"
     }
   },
-  "version": "2.0",
+  "version": "2.1",
   "permissions": [
     "*://*.soundcloud.com/*"
   ],
